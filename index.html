@@ -4,12 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CompoundX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin: 20px 0;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .referral {
+            margin-top: 30px;
+            font-size: 1.1em;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <img src="cpx.png" alt="CompoundX Logo" style="width: 200px; border-radius: 20px;" />
+    <img src="cpx.png" alt="CompoundX Logo" />
     
     <h1>Welcome to CompoundX!</h1>
     <p>This is your DeFi platform.</p>
+
+    <!-- Referral System (Placed above the email capture) -->
+    <div class="referral">
+        <h2>Refer a friend</h2>
+        <p>Share your referral link: <strong>https://compoundx.netlify.app/?ref=youruniqueID</strong></p>
+        <p>Track your referrals and earn rewards!</p>
+    </div>
 
     <!-- Email Capture Form (Formspree) -->
     <h2>Subscribe to our newsletter</h2>
@@ -17,10 +73,5 @@
         <input type="email" name="email" placeholder="Enter your email" required />
         <button type="submit">Subscribe</button>
     </form>
-
-    <!-- Referral System -->
-    <h2>Refer a friend</h2>
-    <p>Share your referral link: <span id="referral-link">https://compoundx.netlify.app/?ref=youruniqueID</span></p>
-    <p>Track your referrals and earn rewards!</p>
 </body>
 </html>
