@@ -8,7 +8,7 @@
       background-color: #0e0e1a;
       color: #ffffff;
       text-align: center;
-      padding-top: 100px;
+      padding-top: 80px;
     }
     h1 {
       font-size: 48px;
@@ -23,12 +23,40 @@
       color: #55ffcc;
       margin-top: 10px;
     }
+    form {
+      margin-top: 40px;
+    }
+    input[type="email"] {
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      width: 250px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 18px;
+      background-color: #55ffcc;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <h1>🚀 CompoundX is Coming</h1>
   <p class="tagline">The future of auto-compounding DeFi on Base.</p>
   <p>Stake. Earn. Refer. Multiply.</p>
-  <p>Follow us on Twitter <strong>@CompoundXDeFi</strong></p>
+
+  <form action="https://formspree.io/f/mzzekplw" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Join Early</button>
+  </form>
+
+  <p style="margin-top:40px;">Follow us on Twitter <strong>@CompoundXDeFi</strong></p>
 </body>
 </html>
+
+ 
