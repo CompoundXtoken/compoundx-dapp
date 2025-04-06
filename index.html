@@ -60,10 +60,10 @@
     <h1>Welcome to CompoundX!</h1>
     <p>This is your DeFi platform.</p>
 
-    <!-- Referral System (Placed above the email capture) -->
+    <!-- Referral System (Automatically filled with URL parameter) -->
     <div class="referral">
         <h2>Refer a friend</h2>
-        <p>Share your referral link: <strong>https://compoundx.netlify.app/?ref=youruniqueID</strong></p>
+        <p>Share your referral link: <strong id="referral-link">Loading...</strong></p>
         <p>Track your referrals and earn rewards!</p>
     </div>
 
@@ -73,5 +73,14 @@
         <input type="email" name="email" placeholder="Enter your email" required />
         <button type="submit">Subscribe</button>
     </form>
+
+    <script>
+        // Extract referral ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const refID = urlParams.get('ref') || 'defaultID'; // Fallback to 'defaultID' if no ref param exists
+        const referralLink = `https://compoundx.netlify.app/?ref=${refID}`;
+        
+        document.getElementById("referral-link").textContent = referralLink;
+    </script>
 </body>
 </html>
