@@ -1,67 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>CompoundX</title>
-  <style>
-   <body> <div style="text-align: center; margin-top: 30px;">
-  <img src="cpx.png" alt="CompoundX Logo" style="width: 200px; border-radius: 20px;" />
-
-</div>
-
-      font-family: Arial, sans-serif;
-      background-color: #0e0e1a;
-      color: #ffffff;
-      text-align: center;
-      padding-top: 80px;
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 20px;
-      color: #b0b0ff;
-    }
-    .tagline {
-      font-size: 24px;
-      color: #55ffcc;
-      margin-top: 10px;
-    }
-    form {
-      margin-top: 40px;
-    }
-    input[type="email"] {
-      padding: 12px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      width: 250px;
-      margin-right: 10px;
-    }
-    button {
-      padding: 12px 20px;
-      font-size: 18px;
-      background-color: #55ffcc;
-      color: #000;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompoundX</title>
 </head>
 <body>
-  <h1>🚀 CompoundX is Coming</h1>
-  <p class="tagline">The future of auto-compounding DeFi on Base.</p>
-  <p>Stake. Earn. Refer. Multiply.</p>
+    <img src="cpx.png" alt="CompoundX Logo" style="width: 200px; border-radius: 20px;" />
+    
+    <h1>Welcome to CompoundX!</h1>
+    <p>This is your DeFi platform.</p>
 
- 
-<div id="getWaitlistContainer" data-waitlist_id="27086" data-widget_type="WIDGET_1"></div>
-<link rel="stylesheet" type="text/css" href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"/>
-<script src="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.js"></script>
+    <!-- Email Capture Form (Formspree) -->
+    <h2>Subscribe to our newsletter</h2>
+    <form action="https://formspree.io/f/mzzekplw" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+    </form>
 
-
-  <p style="margin-top:40px;">Follow us on Twitter <strong>@Compound_Xtoken</strong></p>
+    <!-- Referral System -->
+    <h2>Refer a friend</h2>
+    <p>Share your referral link: <span id="referral-link">https://compoundx.netlify.app/?ref=youruniqueID</span></p>
+    <p>Track your referrals and earn rewards!</p>
 </body>
 </html>
-
- 
