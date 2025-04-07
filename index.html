@@ -2,134 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CompoundX - Early Access</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CompoundX - Auto-Compound DeFi Vaults</title>
+  <link rel="icon" href="/logo.png" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0c0c0c;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #0d0d0d;
       color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 2rem;
       text-align: center;
-      padding: 2rem;
     }
-
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: #1c1c1c;
-      border-radius: 20px;
-    }
-
-    h1 {
+    header h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #00ffa3;
+      margin: 0;
     }
-
-    p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
+    .cta {
+      margin-top: 1rem;
+      font-size: 1.25rem;
     }
-
-    input[type="email"],
-    input[type="text"],
-    input[type="submit"] {
-      padding: 1rem;
-      width: 100%;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      border: none;
-      font-size: 1rem;
+    section {
+      padding: 2rem;
     }
-
-    input[type="submit"] {
-      background-color: #00ffa3;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
     }
-
-    input[type="submit"]:hover {
-      background-color: #00cc8a;
+    .feature-card {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
     }
-
-    .ref-section {
+    .leaderboard {
+      background: #111;
+      border-radius: 1rem;
+      padding: 2rem;
       margin-top: 2rem;
+    }
+    .tokenomics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-around;
+    }
+    .tokenomics div {
+      background: #222;
       padding: 1rem;
-      background: #262626;
-      border-radius: 15px;
+      border-radius: 1rem;
+      width: 45%;
     }
-
-    #myRefLink {
-      width: 80%;
-      margin: 1rem 0;
-      padding: 0.8rem;
-      border-radius: 10px;
-      border: none;
-      font-size: 1rem;
-    }
-
-    button {
-      padding: 0.8rem 1.2rem;
-      background-color: #00ffa3;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #00cc8a;
-    }
-
-    .logo {
-      width: 100px;
-      margin-bottom: 1rem;
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="cpx.png" alt="CompoundX Logo" class="logo" />
-    <h1>Get Early Access to CompoundX</h1>
-    <p>The future of DeFi is here. Join the waitlist and earn rewards by referring friends!</p>
-
-    <form name="waitlist" method="POST" data-netlify="true">
-      <input type="hidden" name="referrer" id="referrer" />
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <input type="submit" value="Join Waitlist" />
+  <header>
+    <h1>CompoundX</h1>
+    <p class="cta">Compound your crypto. Multiply your power.</p>
+    <p>Join our waitlist now to gain early access and referral rewards!</p>
+    <form action="#">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Join Waitlist</button>
     </form>
+  </header>
 
-    <div class="ref-section">
-      <h2>Your Invite Link</h2>
-      <input type="text" id="myRefLink" readonly />
-      <button onclick="copyRefLink()">Copy</button>
+  <section>
+    <h2>Core Features</h2>
+    <div class="features">
+      <div class="feature-card">Auto-Compounding Vaults</div>
+      <div class="feature-card">Referral Rewards System</div>
+      <div class="feature-card">Staking with Sustainable Emissions</div>
+      <div class="feature-card">100% On-Chain Transparency</div>
     </div>
-  </div>
+  </section>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const ref = params.get('ref');
+  <section class="leaderboard">
+    <h2>Referral Leaderboard</h2>
+    <p>Top 10 referrers earn exclusive $CMPX bonuses!</p>
+    <table>
+      <thead>
+        <tr><th>Rank</th><th>Email</th><th>Referrals</th></tr>
+      </thead>
+      <tbody id="leaderboard-table">
+        <tr><td>1</td><td>alpha@cmpx.com</td><td>58</td></tr>
+        <tr><td>2</td><td>bravo@cmpx.com</td><td>44</td></tr>
+        <!-- dynamic rows here -->
+      </tbody>
+    </table>
+  </section>
 
-    // Set the referrer field in the form
-    if (ref) {
-      document.getElementById('referrer').value = ref;
-      localStorage.setItem('referrer', ref);
-    }
+  <section>
+    <h2>Tokenomics</h2>
+    <div class="tokenomics">
+      <div><strong>35%</strong><br />Vault Emissions</div>
+      <div><strong>25%</strong><br />Staking Rewards</div>
+      <div><strong>15%</strong><br />Team (Locked)</div>
+      <div><strong>10%</strong><br />Airdrops</div>
+      <div><strong>10%</strong><br />Referral Rewards</div>
+      <div><strong>5%</strong><br />Treasury</div>
+    </div>
+  </section>
 
-    // Generate your own ref link
-    const userName = prompt("Enter a username to generate your personal referral link:") || "myusername";
-    const myLink = `${window.location.origin}?ref=${userName}`;
-    document.getElementById("myRefLink").value = myLink;
+  <section>
+    <h2>Join the Community</h2>
+    <p>Hop into our Telegram for alpha drops, airdrop alerts, and protocol governance:</p>
+    <a href="https://t.me/compoundxportal">@compoundxportal</a>
+  </section>
 
-    function copyRefLink() {
-      navigator.clipboard.writeText(document.getElementById("myRefLink").value);
-      alert("Link copied!");
-    }
-  </script>
+  <footer>
+    &copy; 2025 CompoundX. All Rights Reserved.
+  </footer>
 </body>
 </html>
