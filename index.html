@@ -3,133 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CompoundX - Early Access</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>CompoundX - Build the Next $100M DeFi Protocol</title>
+  <link rel="stylesheet" href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"/>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0c0c0c;
-      color: #fff;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #0d0d0d;
+      color: white;
       text-align: center;
-      padding: 2rem;
     }
-
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: #1c1c1c;
-      border-radius: 20px;
+    header {
+      padding: 3rem 1rem 1rem;
     }
-
+    header img {
+      max-width: 160px;
+      margin-bottom: 1rem;
+    }
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #00ffa3;
     }
-
     p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
     }
-
-    input[type="email"],
-    input[type="text"],
-    input[type="submit"] {
-      padding: 1rem;
-      width: 100%;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      border: none;
-      font-size: 1rem;
+    .waitlist-section {
+      margin: 3rem auto;
+      max-width: 500px;
     }
-
-    input[type="submit"] {
-      background-color: #00ffa3;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #00cc8a;
-    }
-
-    .ref-section {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: #262626;
-      border-radius: 15px;
-    }
-
-    #myRefLink {
-      width: 80%;
-      margin: 1rem 0;
-      padding: 0.8rem;
-      border-radius: 10px;
-      border: none;
-      font-size: 1rem;
-    }
-
-    button {
-      padding: 0.8rem 1.2rem;
-      background-color: #00ffa3;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #00cc8a;
-    }
-
-    .logo {
-      width: 100px;
-      margin-bottom: 1rem;
+    footer {
+      margin-top: 5rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="cpx.png" alt="CompoundX Logo" class="logo" />
-    <h1>Get Early Access to CompoundX</h1>
-    <p>The future of DeFi is here. Join the waitlist and earn rewards by referring friends!</p>
+  <header>
+    <img src="cpx.png" alt="CompoundX Logo" />
+    <h1>CompoundX</h1>
+    <p>The future of DeFi is community-powered. Stake. Earn. Grow. Join our waitlist today and be part of the movement.</p>
+  </header>
 
-    <form name="waitlist" method="POST" data-netlify="true">
-      <input type="hidden" name="referrer" id="referrer" />
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <input type="submit" value="Join Waitlist" />
-    </form>
-
-    <div class="ref-section">
-      <h2>Your Invite Link</h2>
-      <input type="text" id="myRefLink" readonly />
-      <button onclick="copyRefLink()">Copy</button>
-    </div>
+  <div class="waitlist-section">
+    <div id="getWaitlistContainer" data-waitlist_id="27086" data-widget_type="WIDGET_1"></div>
   </div>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const ref = params.get('ref');
-
-    // Set the referrer field in the form
-    if (ref) {
-      document.getElementById('referrer').value = ref;
-      localStorage.setItem('referrer', ref);
-    }
-
-    // Generate your own ref link
-    const userName = prompt("Enter a username to generate your personal referral link:") || "myusername";
-    const myLink = `${window.location.origin}?ref=${userName}`;
-    document.getElementById("myRefLink").value = myLink;
-
-    function copyRefLink() {
-      navigator.clipboard.writeText(document.getElementById("myRefLink").value);
-      alert("Link copied!");
-    }
-  </script>
-</body>
-</html>
+  <footer>
+    <p>
