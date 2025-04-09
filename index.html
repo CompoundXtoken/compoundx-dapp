@@ -3,124 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CompoundX - Auto-Compound DeFi Vaults</title>
-  <link rel="icon" href="/logo.png" />
+  <title>CompoundX - DeFi on Base</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #0d0d0d;
-      color: #fff;
-      line-height: 1.6;
+    * {
+      box-sizing: border-box;
     }
-    header {
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    .logo {
+      max-width: 220px;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+    .form-wrapper {
       background: #1a1a1a;
       padding: 2rem;
-      text-align: center;
+      border-radius: 12px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-    .cta {
-      margin-top: 1rem;
-      font-size: 1.25rem;
-    }
-    section {
-      padding: 2rem;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-    .feature-card {
-      background: #222;
-      padding: 1.5rem;
-      border-radius: 1rem;
-      text-align: center;
-    }
-    .leaderboard {
-      background: #111;
-      border-radius: 1rem;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-    .tokenomics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: space-around;
-    }
-    .tokenomics div {
-      background: #222;
-      padding: 1rem;
-      border-radius: 1rem;
-      width: 45%;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #111;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.75rem;
+      }
+      .form-wrapper {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>CompoundX</h1>
-    <p class="cta">Compound your crypto. Multiply your power.</p>
-    <p>Join our waitlist now to gain early access and referral rewards!</p>
-    <form action="#">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Join Waitlist</button>
-    </form>
-  </header>
-
-  <section>
-    <h2>Core Features</h2>
-    <div class="features">
-      <div class="feature-card">Auto-Compounding Vaults</div>
-      <div class="feature-card">Referral Rewards System</div>
-      <div class="feature-card">Staking with Sustainable Emissions</div>
-      <div class="feature-card">100% On-Chain Transparency</div>
-    </div>
-  </section>
-
-  <section class="leaderboard">
-    <h2>Referral Leaderboard</h2>
-    <p>Top 10 referrers earn exclusive $CMPX bonuses!</p>
-    <table>
-      <thead>
-        <tr><th>Rank</th><th>Email</th><th>Referrals</th></tr>
-      </thead>
-      <tbody id="leaderboard-table">
-        <tr><td>1</td><td>alpha@cmpx.com</td><td>58</td></tr>
-        <tr><td>2</td><td>bravo@cmpx.com</td><td>44</td></tr>
-        <!-- dynamic rows here -->
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Tokenomics</h2>
-    <div class="tokenomics">
-      <div><strong>35%</strong><br />Vault Emissions</div>
-      <div><strong>25%</strong><br />Staking Rewards</div>
-      <div><strong>15%</strong><br />Team (Locked)</div>
-      <div><strong>10%</strong><br />Airdrops</div>
-      <div><strong>10%</strong><br />Referral Rewards</div>
-      <div><strong>5%</strong><br />Treasury</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Join the Community</h2>
-    <p>Hop into our Telegram for alpha drops, airdrop alerts, and protocol governance:</p>
-    <a href="https://t.me/compoundxportal">@compoundxportal</a>
-  </section>
-
-  <footer>
-    &copy; 2025 CompoundX. All Rights Reserved.
-  </footer>
+  <img src="cpx.png" alt="CompoundX Logo" class="logo" />
+  <h1>CompoundX is Launching on Base</h1>
+  <p>Auto-compounding. Referral rewards. Staking. Built for the community — not the suits. Join the waitlist and be first in line for rewards.</p>
+  
+  <div class="form-wrapper">
+    <!-- MailerLite Form -->
+    <div class="ml-embedded" data-form="HuKcAn"></div>
+    <script>
+      (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);} f.q=f.q||[];m[e]=m[e]||f.bind(f.q);r=a.createElement(i);var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));_.parentNode.insertBefore(r,_); })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+      ml('accounts', '510671', 'v7h3t9w2h6', 'load');
+    </script>
+  </div>
 </body>
 </html>
