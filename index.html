@@ -2,55 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CompoundX - Build the Next $100M DeFi Protocol</title>
-  <link rel="stylesheet" href="https://prod-waitlist-widget.s3.us-east-2.amazonaws.com/getwaitlist.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CompoundX - Earn More. Do Less.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Orbitron', sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background: #0d0d0d;
+      background: linear-gradient(135deg, #000428, #004e92);
       color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
     }
     header {
-      padding: 3rem 1rem 1rem;
+      padding: 2rem 1rem;
     }
     header img {
-      max-width: 160px;
+      width: 160px;
       margin-bottom: 1rem;
     }
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
     }
     p {
-      font-size: 1.2rem;
       max-width: 600px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 1.5rem;
+      font-size: 1.2rem;
     }
-    .waitlist-section {
-      margin: 3rem auto;
-      max-width: 500px;
+    .form-container {
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      width: 90%;
+      max-width: 400px;
     }
-    footer {
-      margin-top: 5rem;
-      font-size: 0.9rem;
-      color: #888;
+    input[type="email"] {
+      padding: 0.75rem;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 1rem;
+    }
+    button {
+      background: #00c9ff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .graphics {
+      margin: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .graphics img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .leaderboard {
+      width: 90%;
+      max-width: 600px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .leaderboard h2 {
+      margin-bottom: 1rem;
+    }
+    .leaderboard ol {
+      list-style: none;
+      padding-left: 0;
+    }
+    .leaderboard li {
+      background: rgba(255,255,255,0.1);
+      margin: 0.25rem 0;
+      padding: 0.5rem;
+      border-radius: 6px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="cpx.png" alt="CompoundX Logo" />
+    <img src="cpx.png" alt="CompoundX Logo">
     <h1>CompoundX</h1>
-    <p>The future of DeFi is community-powered. Stake. Earn. Grow. Join our waitlist today and be part of the movement.</p>
+    <p>The next-gen DeFi yield aggregator with auto-compounding vaults, referral rewards, and real scalability — built on Base.</p>
   </header>
 
-  <div class="waitlist-section">
-    <div id="getWaitlistContainer" data-waitlist_id="27086" data-widget_type="WIDGET_1"></div>
+  <div class="form-container">
+    <form action="https://YOUR_MAILERLITE_FORM_URL" method="post" target="_blank">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Join the Waitlist</button>
+    </form>
   </div>
 
-  <footer>
-    <p>
+  <div class="graphics">
+    <img src="https://images.unsplash.com/photo-1626177631957-5b13a741b41e" alt="Hype Visual 1">
+    <img src="https://images.unsplash.com/photo-1648729307344-10a5b2d2bb40" alt="Hype Visual 2">
+  </div>
+
+  <div class="leaderboard">
+    <h2>Top Referrers</h2>
+    <ol>
+      <li>#1 - @cryptoAlpha</li>
+      <li>#2 - @yieldWizard</li>
+      <li>#3 - @ethMaxi69</li>
+      <li>#4 - @defiDegen</li>
+      <li>#5 - @airdropHunter</li>
+    </ol>
+  </div>
+</body>
+</html>
